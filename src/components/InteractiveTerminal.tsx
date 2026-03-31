@@ -57,7 +57,7 @@ export function InteractiveTerminal({
     if (outputRef.current) {
       outputRef.current.scrollTop = outputRef.current.scrollHeight;
     }
-  }, [output]);
+  }, [output, input]);
 
   const applyHistoryIndex = (nextIndex: number, nextInput: string) => {
     skipHistoryCursorReset.current = true;
@@ -128,6 +128,12 @@ export function InteractiveTerminal({
 
   const inputDisabled = success || isReadOnly;
 
+  const handleOutputClick = () => {
+    if (inputRef.current && !inputDisabled && isInteractive) {
+      inputRef.current.focus();
+    }
+  };
+
   return (
     <div className="bg-terminal-bg border border-terminal-surface rounded-lg overflow-hidden h-full flex flex-col">
       <div className="bg-terminal-surface px-4 py-2 border-b border-terminal-surface flex items-center gap-2">
@@ -145,7 +151,8 @@ export function InteractiveTerminal({
         aria-label="Terminal output"
         aria-live="polite"
         aria-relevant="additions"
-        className="flex-1 p-4 font-mono text-sm overflow-y-auto min-h-0"
+        onClick={handleOutputClick}
+        className="flex-1 p-4 font-mono text-sm overflow-y-auto min-h-0 cursor-text relative"
       >
         {output.map((line, index) => (
           <div
@@ -161,35 +168,36 @@ export function InteractiveTerminal({
             {line}
           </div>
         ))}
-      </div>
 
-      {isInteractive && (
-        <form
-          onSubmit={handleSubmit}
-          className="p-4 border-t border-terminal-surface"
-        >
-          <div className="flex items-center gap-2">
-            <span className="text-terminal-prompt font-mono" aria-hidden>
-              $
-            </span>
-            <input
-              ref={inputRef}
-              type="text"
-              value={input}
-              onChange={(e) => handleInputChange(e.target.value)}
-              onKeyDown={handleKeyDown}
-              disabled={inputDisabled}
-              autoComplete="off"
-              aria-label="Terminal command input"
-              className={clsx(
-                'flex-1 bg-transparent border-none outline-none font-mono text-terminal-text text-base',
-                'focus:ring-0 disabled:opacity-50'
+        {isInteractive && !inputDisabled && (
+          <div className="flex items-center gap-1">
+            <span className="text-terminal-prompt font-mono">$</span>
+            <div className="relative flex items-center">
+              {!input && (
+                <span className="inline-block w-2 h-4 bg-terminal-text animate-blink" />
               )}
-              placeholder="Type a command..."
-            />
+              <span className="text-terminal-text font-mono whitespace-pre">{input}</span>
+              {input && (
+                <span className="inline-block w-2 h-4 bg-terminal-text animate-blink" />
+              )}
+            </div>
           </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="absolute opacity-0 pointer-events-none">
+          <input
+            ref={inputRef}
+            type="text"
+            value={input}
+            onChange={(e) => handleInputChange(e.target.value)}
+            onKeyDown={handleKeyDown}
+            disabled={inputDisabled}
+            autoComplete="off"
+            aria-label="Terminal command input"
+            tabIndex={-1}
+          />
         </form>
-      )}
+      </div>
 
       {error && !success && (
         <div className="px-4 py-2 bg-terminal-error/10 border-t border-terminal-error/20">
