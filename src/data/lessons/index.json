@@ -1,0 +1,23 @@
+[
+  {
+    "key": "basics",
+    "slug": "basic-commands",
+    "title": "Basic Commands",
+    "description": "Learn the fundamental Linux commands to navigate and explore the terminal",
+    "stepCount": 8
+  },
+  {
+    "key": "navigation",
+    "slug": "navigation-and-paths",
+    "title": "Navigation & Paths",
+    "description": "Master directory navigation with absolute and relative paths",
+    "stepCount": 7
+  },
+  {
+    "key": "fileops",
+    "slug": "file-operations",
+    "title": "File Operations",
+    "description": "Create, view, and manage files and directories",
+    "stepCount": 10
+  }
+]
