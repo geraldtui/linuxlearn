@@ -115,6 +115,30 @@ The core flow is:
 
 For more details, see [sys-design.md](./sys-design.md).
 
+## Deployment
+
+### Vercel (Recommended)
+
+1. Push your repo to GitHub
+2. Import project at [vercel.com](https://vercel.com)
+3. Vercel auto-detects Next.js configuration
+4. Deploy!
+
+### Custom Domain
+
+To use a custom subdomain (e.g., `linuxlearn.yourdomain.com`):
+
+1. Go to Project Settings → Domains in Vercel
+2. Add your custom domain
+3. Add CNAME record in your DNS provider:
+   ```
+   Type: CNAME
+   Name: linuxlearn
+   Value: cname.vercel-dns.com
+   ```
+4. Wait for DNS propagation (~15 minutes)
+5. Vercel automatically provisions SSL certificate
+
 ## License
 
 MIT
