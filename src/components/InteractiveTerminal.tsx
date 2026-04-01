@@ -165,7 +165,7 @@ export function InteractiveTerminal({
                 'text-terminal-text'
             )}
           >
-            {line}
+            {line || '\u00A0'}
           </div>
         ))}
 
