@@ -1,4 +1,4 @@
-# auto-spec
+# auto-sdd
 
 Autonomously create, review, update, implement, and verify a feature specification from start to finish.
 
@@ -14,9 +14,9 @@ This command runs the complete Spec-Driven Development (SDD) workflow:
 - User provides a clear feature request or user story
 - Agent may ask clarifying questions before creating the spec
 
-**Usage:** /auto-spec [feature description]
+**Usage:** /auto-sdd [feature description]
 
-**Example:** /auto-spec As a user, I want to export lesson progress to JSON, so that I can backup my learning data
+**Example:** /auto-sdd As a user, I want to export lesson progress to JSON, so that I can backup my learning data
 
 ---
 

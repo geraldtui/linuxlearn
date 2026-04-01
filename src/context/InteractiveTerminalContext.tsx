@@ -95,7 +95,7 @@ export function InteractiveTerminalProvider({ children, lessonData, lessonKey }:
 
     const promptLine = `$ ${cmd}`;
     const newLines = validation.output
-      ? [promptLine, validation.output]
+      ? [promptLine, ...validation.output.split('\n')]
       : [promptLine];
     setOutput(prev => [...prev, ...newLines]);
 

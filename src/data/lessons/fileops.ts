@@ -3,10 +3,10 @@ import { StepData } from '@/types';
 const fileops: StepData[] = [
   {
     title: "Create a Directory",
-    description: "The 'mkdir' command creates a new directory. Try creating a directory called 'projects'.",
+    description: "The 'mkdir' command creates a new directory. Use it to create a directory called 'projects'.",
     interactive: true,
     expectedCommand: ["mkdir projects"],
-    hint: "Type: mkdir projects",
+    hint: "Use the command that 'makes a directory' followed by the name",
     initialFS: {
       "home": {
         type: "dir",
@@ -25,10 +25,10 @@ const fileops: StepData[] = [
   },
   {
     title: "Create Nested Directories",
-    description: "Use 'mkdir -p' to create nested directories all at once. Create 'projects/web/frontend' with a single command.",
+    description: "The 'mkdir' command has a flag that lets you create nested directories all at once. Create the nested path 'projects/web/frontend' with a single command.",
     interactive: true,
     expectedCommand: ["mkdir -p projects/web/frontend"],
-    hint: "Type: mkdir -p projects/web/frontend",
+    hint: "Use the -p flag with mkdir to create parent directories automatically",
     initialFS: {
       "home": {
         type: "dir",
@@ -47,10 +47,10 @@ const fileops: StepData[] = [
   },
   {
     title: "Create a File",
-    description: "The 'touch' command creates an empty file. Create a file called 'README.md'.",
+    description: "The 'touch' command creates an empty file. Use it to create a file called 'README.md'.",
     interactive: true,
     expectedCommand: ["touch README.md"],
-    hint: "Type: touch README.md",
+    hint: "Use the command that creates empty files, followed by the filename",
     initialFS: {
       "home": {
         type: "dir",
@@ -71,11 +71,11 @@ const fileops: StepData[] = [
   },
   {
     title: "View File Contents",
-    description: "The 'cat' command displays the contents of a file. View the contents of 'welcome.txt'.",
+    description: "The 'cat' command displays the contents of a file. Use it to view what's inside 'welcome.txt'.",
     interactive: true,
     expectedCommand: ["cat welcome.txt"],
     expectedOutput: "Welcome to Linux!",
-    hint: "Type: cat welcome.txt",
+    hint: "Use the command that displays file contents, followed by the filename",
     initialFS: {
       "home": {
         type: "dir",
@@ -93,10 +93,10 @@ const fileops: StepData[] = [
   },
   {
     title: "Write to a File",
-    description: "Use 'echo' with '>' to write text to a file. Write 'Hello Linux' to a file called 'greeting.txt'.",
+    description: "The 'echo' command prints text, but you can redirect its output to a file using '>'. Write the text 'Hello Linux' to a file called 'greeting.txt'.",
     interactive: true,
     expectedCommand: ["echo Hello Linux > greeting.txt"],
-    hint: "Type: echo Hello Linux > greeting.txt",
+    hint: "Use echo followed by your text, then > to redirect it to a file",
     initialFS: {
       "home": {
         type: "dir",
@@ -116,10 +116,10 @@ const fileops: StepData[] = [
   },
   {
     title: "Append to a File",
-    description: "Use '>>' to append text to a file without overwriting it. Append 'Second line' to greeting.txt.",
+    description: "The '>' operator overwrites files. There's a similar operator with two angle brackets that appends instead. Use 'echo' to append 'Second line' to greeting.txt without erasing what's already there.",
     interactive: true,
     expectedCommand: ["echo Second line >> greeting.txt"],
-    hint: "Type: echo Second line >> greeting.txt",
+    hint: "Use >> instead of > to append rather than overwrite",
     initialFS: {
       "home": {
         type: "dir",
@@ -141,10 +141,10 @@ const fileops: StepData[] = [
   },
   {
     title: "View Updated File",
-    description: "Let's verify the file was updated. Use 'cat' to view greeting.txt again.",
+    description: "Let's verify the file was updated. Use 'cat' to view the contents of greeting.txt.",
     interactive: true,
     expectedCommand: ["cat greeting.txt"],
-    hint: "Type: cat greeting.txt",
+    hint: "Use the same command you used earlier to view file contents",
     initialFS: {
       "home": {
         type: "dir",
@@ -165,10 +165,10 @@ const fileops: StepData[] = [
   },
   {
     title: "Remove a File",
-    description: "The 'rm' command removes files. Delete the greeting.txt file.",
+    description: "The 'rm' command removes files. Use it to delete the greeting.txt file.",
     interactive: true,
     expectedCommand: ["rm greeting.txt"],
-    hint: "Type: rm greeting.txt",
+    hint: "Use the command that removes files, followed by the filename",
     initialFS: {
       "home": {
         type: "dir",
@@ -190,10 +190,10 @@ const fileops: StepData[] = [
   },
   {
     title: "Try Removing a Directory",
-    description: "Try removing the 'documents' directory with just 'rm documents'. You'll see an error - directories need special handling!",
+    description: "Try using 'rm' on the 'documents' directory. You'll see an error - directories need special handling!",
     interactive: true,
     expectedCommand: ["rm documents"],
-    hint: "Type: rm documents",
+    hint: "Try using rm on the directory name to see what happens",
     initialFS: {
       "home": {
         type: "dir",
@@ -214,10 +214,10 @@ const fileops: StepData[] = [
   },
   {
     title: "Remove a Directory Recursively",
-    description: "To remove a directory and its contents, use 'rm -r'. Now remove the documents directory properly.",
+    description: "To remove a directory and its contents, 'rm' needs a special flag. Use 'rm' with the recursive flag to remove the documents directory.",
     interactive: true,
     expectedCommand: ["rm -r documents"],
-    hint: "Type: rm -r documents",
+    hint: "Use the -r flag with rm to remove directories recursively",
     initialFS: {
       "home": {
         type: "dir",
