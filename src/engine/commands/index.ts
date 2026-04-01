@@ -9,6 +9,7 @@ import { cat } from './cat';
 import { echo } from './echo';
 import { rm } from './rm';
 import { clear } from './clear';
+import { man } from './man';
 
 export type CommandHandler = (
   parsed: ParsedCommand,
@@ -24,7 +25,8 @@ export const commandRegistry: Record<string, CommandHandler> = {
   cat,
   echo,
   rm,
-  clear
+  clear,
+  man
 };
 
-export { pwd, ls, cd, mkdir, touch, cat, echo, rm, clear };
+export { pwd, ls, cd, mkdir, touch, cat, echo, rm, clear, man };

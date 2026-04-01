@@ -1,9 +1,15 @@
+import { useState, useEffect } from 'react';
 import { useTerminalContext } from '@/context/InteractiveTerminalContext';
 import { InteractiveTerminal } from './InteractiveTerminal';
 
 export function Step() {
   const { lessonData, step } = useTerminalContext();
   const currentStep = lessonData[step];
+  const [showHint, setShowHint] = useState(false);
+
+  useEffect(() => {
+    setShowHint(false);
+  }, [step]);
 
   if (!currentStep) {
     return (
@@ -23,14 +29,29 @@ export function Step() {
           <h2 className="text-2xl font-bold mb-4">{currentStep.title}</h2>
           <p className="text-terminal-muted leading-relaxed">
             {currentStep.description}
+            {currentStep.interactive && (
+              <span className="block mt-3 text-sm text-terminal-prompt/70">
+                💡 Use <code className="px-1 py-0.5 bg-terminal-bg rounded text-terminal-prompt">man [command]</code> to view command usage.
+              </span>
+            )}
           </p>
         </div>
 
         {currentStep.hint && (
           <div className="bg-terminal-surface/50 rounded-lg p-4 border border-terminal-surface">
-            <div className="text-sm text-terminal-muted">
-              <span className="font-semibold">💡 Hint:</span> {currentStep.hint}
-            </div>
+            {!showHint ? (
+              <button
+                type="button"
+                onClick={() => setShowHint(true)}
+                className="text-sm text-terminal-prompt hover:text-terminal-text transition-colors font-medium"
+              >
+                💡 Show Hint
+              </button>
+            ) : (
+              <div className="text-sm text-terminal-muted">
+                <span className="font-semibold">💡 Hint:</span> {currentStep.hint}
+              </div>
+            )}
           </div>
         )}
       </aside>
