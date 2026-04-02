@@ -5,7 +5,7 @@
 
 ## User Story
 
-As a new visitor, I want to understand what LinuxLearn offers and easily start my first lesson.
+As a new visitor, I want to understand what SudoSchool offers and easily start my first lesson.
 
 ## Context
 

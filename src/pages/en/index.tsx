@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>LinuxLearn - Interactive Linux Terminal Lessons</title>
+        <title>SudoSchool - Interactive Linux Terminal Lessons</title>
         <meta name="description" content="Master the Linux terminal through interactive, hands-on lessons directly in your browser. No installation required." />
       </Head>
       <div className="min-h-screen flex flex-col bg-terminal-bg">

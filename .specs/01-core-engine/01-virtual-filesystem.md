@@ -10,7 +10,7 @@ As a learner, I want my typed commands to work against a real-feeling Linux file
 ## Context
 
 ### Why
-LinuxLearn needs an in-memory filesystem that behaves like real Linux to provide authentic learning without requiring server-side containers or affecting users' actual systems. All command handlers depend on this as their shared state.
+SudoSchool needs an in-memory filesystem that behaves like real Linux to provide authentic learning without requiring server-side containers or affecting users' actual systems. All command handlers depend on this as their shared state.
 
 ### Related Specs
 - Spec 1.3: Command Executor (depends on this)

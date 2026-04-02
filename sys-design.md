@@ -1,4 +1,4 @@
-# LinuxLearn - System Design Document
+# SudoSchool - System Design Document
 
 ## Overview
 
@@ -150,7 +150,7 @@ A web-based interactive Linux learning platform inspired by RegexLearn. Users le
 Following RegexLearn's architecture:
 
 ```
-linuxlearn/
+sudoschool/
 ├── public/
 │   ├── favicon.ico
 │   └── images/                    # Static assets
@@ -1246,7 +1246,7 @@ module.exports = {
 1. Push code to GitHub
 2. Import repo in Vercel
 3. Auto-deploys on push to main
-4. Access at `https://linuxlearn.vercel.app`
+4. Access at `https://sudoschool.vercel.app`
 
 ### Option 2: Netlify
 
@@ -1269,7 +1269,7 @@ module.exports = {
 module.exports = {
   output: 'export',
   images: { unoptimized: true },
-  basePath: '/linuxlearn'  // Your repo name
+  basePath: '/sudoschool'  // Your repo name
 }
 ```
 
@@ -1485,10 +1485,10 @@ Following RegexLearn's dependency choices:
 
 ```bash
 # Create Next.js project with TypeScript
-npx create-next-app@latest linuxlearn --typescript --tailwind --app false --src-dir --import-alias "@/*"
+npx create-next-app@latest sudoschool --typescript --tailwind --app false --src-dir --import-alias "@/*"
 
 # Navigate to project
-cd linuxlearn
+cd sudoschool
 
 # Install additional dependencies
 npm install @headlessui/react clsx lookie react-hot-toast canvas-confetti copy-to-clipboard lodash

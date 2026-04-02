@@ -5,7 +5,7 @@
 
 ## User Story
 
-As a new visitor, I want an attractive landing page that explains what LinuxLearn is, So that I am motivated to start learning.
+As a new visitor, I want an attractive landing page that explains what SudoSchool is, So that I am motivated to start learning.
 
 ## Context
 
