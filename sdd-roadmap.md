@@ -1,8 +1,8 @@
-# SudoSchool - Spec-Driven Development Roadmap
+# SudoSkills - Spec-Driven Development Roadmap
 
 ## Overview
 
-This document outlines the Spec-Driven Development (SDD) approach for building SudoSchool, a web-based interactive Linux learning platform. We'll build the system incrementally, starting from the core engine and working up to the UI layer.
+This document outlines the Spec-Driven Development (SDD) approach for building SudoSkills, a web-based interactive Linux learning platform. We'll build the system incrementally, starting from the core engine and working up to the UI layer.
 
 **SDD Workflow:**
 1. **Create Spec** - Define requirements, interfaces, and behavior
@@ -710,7 +710,7 @@ Connect all pieces and add final touches.
 **Spec Overview:**
 - **Purpose**: Global header with branding and navigation
 - **Features**:
-  - Logo/branding: "SudoSchool"
+  - Logo/branding: "SudoSkills"
   - Navigation links:
     - Home
     - Learn (lesson catalog)
@@ -733,7 +733,7 @@ Connect all pieces and add final touches.
 ### Spec 4.6: Landing Page Components
 
 **User Story:**
-> As a new visitor, I want an attractive landing page that explains what SudoSchool is and motivates me to start learning.
+> As a new visitor, I want an attractive landing page that explains what SudoSkills is and motivates me to start learning.
 
 **Spec Overview:**
 - **Purpose**: Marketing/intro page to convert visitors to learners
@@ -846,7 +846,7 @@ Connect all pieces and add final touches.
 ### Spec 5.3: Landing Page
 
 **User Story:**
-> As a new visitor, I want to understand what SudoSchool offers and easily start my first lesson.
+> As a new visitor, I want to understand what SudoSkills offers and easily start my first lesson.
 
 **Spec Overview:**
 - **Purpose**: Marketing page and entry point
@@ -1377,7 +1377,7 @@ For each spec, include:
 
 ---
 
-## Benefits of SDD for SudoSchool
+## Benefits of SDD for SudoSkills
 
 ### 1. Clear Requirements
 - Each component has explicit requirements
@@ -1495,7 +1495,7 @@ Use this template for each spec:
 
 ## Summary
 
-**SDD Approach for SudoSchool:**
+**SDD Approach for SudoSkills:**
 1. Start with core engine specs (filesystem, parser, commands)
 2. Build validation layer specs
 3. Define state management specs

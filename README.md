@@ -1,4 +1,4 @@
-# SudoSchool
+# SudoSkills
 
 Learn Linux commands interactively through hands-on practice in a simulated terminal environment.
 
@@ -104,7 +104,7 @@ src/
 
 ## Architecture
 
-SudoSchool uses a **Client-side Virtual Filesystem**. All commands are parsed and executed entirely in the browser using JavaScript. No actual server or container is used. 
+SudoSkills uses a **Client-side Virtual Filesystem**. All commands are parsed and executed entirely in the browser using JavaScript. No actual server or container is used. 
 
 The core flow is:
 1. User types command in the React UI.
@@ -126,14 +126,14 @@ For more details, see [sys-design.md](./sys-design.md).
 
 ### Custom Domain
 
-To use a custom subdomain (e.g., `sudoschool.yourdomain.com`):
+To use a custom subdomain (e.g., `sudoskills.yourdomain.com`):
 
 1. Go to Project Settings → Domains in Vercel
 2. Add your custom domain
 3. Add CNAME record in your DNS provider:
    ```
    Type: CNAME
-   Name: sudoschool
+   Name: sudoskills
    Value: cname.vercel-dns.com
    ```
 4. Wait for DNS propagation (~15 minutes)

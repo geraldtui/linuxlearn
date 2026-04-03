@@ -2,7 +2,7 @@ import { StepData } from '@/types';
 
 const basics: StepData[] = [
   {
-    title: "Welcome to SudoSchool",
+    title: "Welcome to SudoSkills",
     description: "In this lesson, you'll learn the most fundamental Linux commands. Let's start by understanding where you are in the filesystem.",
     interactive: false,
     readOnly: true,

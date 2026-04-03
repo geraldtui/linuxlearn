@@ -36,7 +36,7 @@ A consistent header anchors branding and primary routes across lesson and market
 
 - [x] **AC1**: Branding link (serves as Home)
   - Given the header is visible
-  - When the user clicks the SudoSchool brand
+  - When the user clicks the SudoSkills brand
   - Then they navigate to the site home (e.g. `/` or `/en`); a separate “Home” nav item is optional if the brand already fulfils this
 
 - [x] **AC2**: Learn link

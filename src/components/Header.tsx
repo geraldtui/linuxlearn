@@ -12,9 +12,9 @@ export function Header() {
         <Link
           href="/"
           className="text-xl font-bold text-terminal-text hover:text-terminal-prompt transition"
-          aria-label="SudoSchool home"
+          aria-label="SudoSkills home"
         >
-          SudoSchool
+          SudoSkills
         </Link>
 
         <nav className="flex items-center gap-6" aria-label="Main">
